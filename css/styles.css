@@ -1,0 +1,167 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-background: #fff;
+    --light-text: #000;
+    --dark-background: #121212;
+    --dark-text: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--light-text); /* Default text color for light mode */
+    background-color: var(--light-background); /* Default background color for light mode */
+}
+
+header {
+    padding: 1rem;
+    background-color: #f4f4f4; /* Light background for header */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1, h2, h3, p {
+    color: inherit; /* Inherit text color from body */
+}
+
+.project {
+    background-color: var(--light-background); /* Default background for projects */
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--dark-background); /* Dark background */
+    color: var(--dark-text); /* Light text in dark mode */
+}
+
+header.dark-mode {
+    background-color: #1f1f1f; /* Dark header background */
+}
+
+.project.dark-mode {
+    background-color: #333; /* Dark mode project background */
+    border: 1px solid #444;
+}
+
+nav ul li a.dark-mode {
+    color: #bbb; /* Light text links in dark mode */
+}
+
+/* Button Styles */
+#darkModeBtn {
+    background-color: #fff;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#darkModeBtn:hover {
+    background-color: #555;
+}
+
+/* Contact Section Styles */
+#contact {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Social Links */
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #0077b5; 
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px;
+}
+
+.social-links a:hover {
+    background-color: #0073e6; 
+    transform: scale(1.1);
+}
+
+.social-links svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+/* Tablet Breakpoint */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
